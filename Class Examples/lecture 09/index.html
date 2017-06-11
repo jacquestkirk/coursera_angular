@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app= 'DIApp'>
+  <head>
+    <meta charset = "utf-8">
+    <script src = "angular.min.js"></script>
+    <script src = "app.js"></script>
+    <title> Dependency Injection in Javascript ( and Angular JS)</title>
+  </head>
+  <body>
+    <h1>Dependency Injection in Javascript ( and Angular JS)</h1>
+    <div ng-controller = 'DIController'>
+      <input type = "text"
+              ng-model = "name"
+              ng-blur = "upper();">
+      <br>
+      {{name}} says Hello!
+      <br>
+      Cost: {{cookieCost|currency : "#blah" : 4}}
+      <br>
+      {{sayLovesMessage()}}
+      <br>
+      {{sayTruthMessage()}}
+      <br>
+      {{"Testing the likes filter" | loves}}
+      <br>
+      {{"Testing the stupid fliter" | truth : "stupid" : "Truth" |uppercase }}
+
+    </div>
+
+  </body>
+</html>
